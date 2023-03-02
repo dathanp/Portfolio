@@ -1,2 +1,3 @@
 # Portfolio
  
+This is a personal Portfolio website that showcases my skills though design and functionality.

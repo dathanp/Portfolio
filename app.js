@@ -1,21 +1,33 @@
 
+// adjust scroll function
+window.addEventListener('scroll', function() {
+  let parallaxImages = this.document.querySelectorAll('.parallax');
+  let parallaxImagesPlusX = this.document.querySelectorAll('.parallaxPlusX');
+  let parallaxImagesMinusX = this.document.querySelectorAll('.parallaxMinusX');
+  let scrollPosition = window.scrollY;
+  // speed of scroll
+  parallaxImages.forEach(function(pic, index) {
+    let speed = index % 2 === 0 ? 0.5 : 0.2;
+    pic.style.transform = 'translateY(' + (scrollPosition * speed) + 'px)';
+  });
 
-let text = document.getElementById('text');
-let leaves = document.getElementById('leaves');
-let bridge = document.getElementById('bridge');
-let bird = document.getElementById('bird');
-let cloud = document.getElementById('cloud');
-let sun = document.getElementById('sun');
+  parallaxImagesPlusX.forEach(function(pic, index) {
+    let speed = index % 2 === 0 ? 0.5 : 0.2;
+    pic.style.transform = 'translateX(' + (scrollPosition * speed) + 'px)';
+  });
 
-window.addEventListener('scroll', () => {
-    let value = window.scrollY;
-    text.style.marginTop = value * -1 + 'px';
-    leaves.style.left = value * -1.5 + 'px';
-    bird.style.left = value * -.5 + 'px';
-    cloud.style.left = value * 2.5 + 'px';
-    sun.style.marginTop = value * -.5 + 'px';
-    sun.style.left = value * .8 + 'px';
-})
+  parallaxImagesMinusX.forEach(function(pic, index) {
+    let speed;
+     if(index === 0) {
+        speed = 0.7;
+     } else if(index === 1) {
+      speed = 0.3;
+     } else {
+      speed = 0.2;
+     }
+    pic.style.transform = 'translateX(' + (-scrollPosition * speed) + 'px)';
+  });
+});
 
 const cards = document.querySelectorAll('.card');
 

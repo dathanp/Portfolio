@@ -2,20 +2,29 @@
 <html>
   <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <title>My Website</title>
     <link rel="stylesheet" type="text/css" href="app.css"> 
   </head>
   <body>
     <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="about.html">About me</a></li>
-        <li><a class="active" href="contact.html">Contact me</a></li>
+      <div class="menu-toggle">
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+      </div>
+      <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="documentation.html">Documentation</a></li>
+          <li><a href="about.html">About me</a></li>
+          <li><a href="contact.html">Contact me</a></li>
       </ul>
-    </nav>   
+  </nav>
+    
     <div class="contact-container">
-      <h1>Contact Me</h1>
+      <h2>Want to know more? Leave me a message!</h2>
       <form method="post" action="https://formspree.io/f/xjvdrrlr">
         <label for="name">Name</label>
         <input type="text" id="name" name="name" required>

@@ -2,18 +2,25 @@
 <html>
   <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>My Website</title>
     <link rel="stylesheet" type="text/css" href="app.css"> 
   </head>
   <body>
     <nav>
-      <ul>
-        <li><a class="active" href="index.html">Home</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="about.html">About me</a></li>
-        <li><a href="contact.html">Contact me</a></li>
+      <div class="menu-toggle">
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+      </div>
+      <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="documentation.html">Documentation</a></li>
+          <li><a href="about.html">About me</a></li>
+          <li><a href="contact.html">Contact me</a></li>
       </ul>
-    </nav>
+  </nav>  
 
     <div class="parallax-container">
       <div class="parallaxPlusX" style="background-image: url('parallax/new sun v1.png');" id="sun"></div>

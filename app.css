@@ -367,6 +367,61 @@ a:hover {
   background-color: #d26a85;
 }
 
+@media (max-width: 768px) {
+  .about-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding-top: 80px;
+    width: 100%;
+  }
+
+  .about-content {
+    max-width: 100%; /* Ensure full width on small screens */
+    text-align: center;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about-content img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+  }
+
+  .about-content h2 {
+    font-size: 1.5em; 
+    text-align: center;
+  }
+
+  .about-content p {
+    font-size: 1em; 
+    max-width: 90%; 
+    text-align: center;
+    word-wrap: break-word; 
+  }
+
+  .about-content ul {
+    padding: 0;
+    list-style-position: inside;
+    max-width: 90%;
+    text-align: left; 
+  }
+
+  
+  .about-content ul li {
+    word-wrap: break-word;
+    white-space: normal;
+  }
+
+  .contact-button {
+    font-size: 1.2em;
+    padding: 10px 15px;
+  }
+}
 
 /* Contact Form */
 
